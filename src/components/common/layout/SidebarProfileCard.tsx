@@ -61,6 +61,28 @@ const SidebarProfileCard: React.FC = () => {
           value="Townhall Aurangabad"
         />
       </div>
+
+
+            <hr style={dividerStyle} />
+
+      <div style={socialContainer}>
+        <a href="https://www.linkedin.com/in/aaqeel97" target="_blank" rel="noopener noreferrer">
+          <Icons.linkedin style={socialIconStyle} />
+        </a>
+        <a href="https://www.facebook.com/your-profile" target="_blank" rel="noopener noreferrer">
+          <Icons.facebook style={socialIconStyle} />
+        </a>
+        <a href="https://www.instagram.com/your-profile" target="_blank" rel="noopener noreferrer">
+          <Icons.instagram style={socialIconStyle} />
+        </a>
+        <a href="https://github.com/SBST-backup" target="_blank" rel="noopener noreferrer">
+          <Icons.github style={socialIconStyle} />
+        </a>
+        <a href="https://twitter.com/your-profile" target="_blank" rel="noopener noreferrer">
+          <Icons.twitter style={socialIconStyle} />
+        </a>
+      </div>
+
     </Card>
   );
 };
@@ -141,6 +163,18 @@ const valueStyle = {
   margin: 0,
   fontSize: fontSizes.sm,
   color: colors.black,
+};
+const socialContainer: React.CSSProperties = {
+  display: "flex",
+  justifyContent: "center",
+  gap: spacing.md,
+  marginTop: spacing.md,
+};
+
+const socialIconStyle: React.CSSProperties = {
+  fontSize: fontSizes.lg,
+  color: colors.primary,
+  cursor: "pointer",
 };
 
 export default SidebarProfileCard;

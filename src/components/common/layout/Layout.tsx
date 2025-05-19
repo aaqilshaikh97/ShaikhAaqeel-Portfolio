@@ -26,7 +26,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
     >
       <Box
         sx={{
-          padding: spacing.lg,
+          padding: spacing.md,
           order: { xs: 1, md: 2 },
         }}
       >
@@ -35,7 +35,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
       <Box
         component="main"
         sx={{
-          padding: spacing.lg,
+          padding: spacing.md,
           order: { xs: 1, md: 2 },
         }}
       >
