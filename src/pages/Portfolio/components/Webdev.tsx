@@ -90,9 +90,10 @@ const WebDev = () => {
     <>
       <>
         <Card
-          borderColor={borders.rounded}
-          bgColor={colors.white}
-          padding={spacing.md}
+           borderColor={borders.normal}
+          shadow={shadows.none}
+          bgColor={colors.Transparent}
+          padding={spacing.sm}
           margin={spacing.sm}
         >
           <Typography

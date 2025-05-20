@@ -1,13 +1,12 @@
-// src/components/common/Dialog/AppDetails.tsx
 import React from "react";
 import Dialog from "@mui/material/Dialog";
-// import DialogTitle from "@mui/material/DialogTitle";
 import DialogContent from "@mui/material/DialogContent";
 import Typography from "../../../components/common/Typography/Typography";
 import { colors } from "../../../styles/constants/colors";
 import { spacing } from "../../../styles/constants/spacing";
 import { imageSizes } from "../../../styles/constants/imageSizes";
 import { borders } from "../../../styles/constants/borders";
+import Grid from "@mui/material/Grid";
 
 interface AppDetailsProps {
   open: boolean;
@@ -51,21 +50,23 @@ const AppDetails: React.FC<AppDetailsProps> = ({
             Visit Project
           </a>
         </Typography>
-        <div style={{ display: "flex", flexWrap: "wrap", gap: spacing.sm }}>
+        <Grid container spacing={1}>
           {images.map((img, idx) => (
-            <img
-              key={idx}
-              src={img}
-              alt={`preview-${idx}`}
-              style={{
-                ...imageSizes.appImage,
-                border:borders.thin,
-                objectFit: "cover",
-                borderRadius: borders.rounded,
-              }}
-            />
+            <Grid size={{ xs: 6, md: 3, sm: 3 }} key={idx}>
+              <img
+                src={img}
+                alt={`preview-${idx}`}
+                style={{
+                  ...imageSizes.appImage,
+                  border: borders.thin,
+                  objectFit: "cover",
+                  borderRadius: borders.rounded,
+                  display: "block",
+                }}
+              />
+            </Grid>
           ))}
-        </div>
+        </Grid>
       </DialogContent>
     </Dialog>
   );

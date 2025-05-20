@@ -20,7 +20,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         gap: spacing.lg,
         minHeight: "100vh",
         backgroundColor: colors.background,
-        p: `0 10%`,
+        p: `0 5%`,
         boxSizing: "border-box",
       }}
     >

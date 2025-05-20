@@ -70,6 +70,20 @@ const appProjects: AppData[] = [
     category: "Health",
     url: "https://example.com/safewheels",
   },
+    {
+    id: 3,
+    images: [SafeWheels, SafeWheels, SafeWheels],
+    name: "FitTrack",
+    category: "Health",
+    url: "https://example.com/safewheels",
+  },
+    {
+    id: 3,
+    images: [SafeWheels, SafeWheels, SafeWheels],
+    name: "FitTrack",
+    category: "Health",
+    url: "https://example.com/safewheels",
+  },
 ];
 
 const AppDev = () => {
@@ -90,9 +104,10 @@ const AppDev = () => {
     <>
       <>
         <Card
-          borderColor={borders.rounded}
-          bgColor={colors.white}
-          padding={spacing.md}
+          borderColor={borders.normal}
+          shadow={shadows.none}
+          bgColor={colors.Transparent}
+          padding={spacing.sm}
           margin={spacing.sm}
         >
           <Typography
@@ -101,19 +116,17 @@ const AppDev = () => {
             weight="bold"
             style={{ marginBottom: spacing.sm }}
           >
-              Mobile Applications
-
+            Mobile Applications
           </Typography>
-          <Grid container spacing={2}>
+          <Grid container spacing={1}>
             {appProjects.map((project) => (
-              <Grid size={{ xs: 12, md: 4, sm: 4 }} key={project.id}>
+              <Grid size={{ xs: 12, md: 3, sm: 3 }} key={project.id} sx={{}}>
                 <Card
                   key={project.id}
                   onClick={() => handleCardClick(project)}
                   shadow={shadows.medium}
                   borderColor={borders.rounded}
                   bgColor={colors.white}
-                  style={{ ...imageSizes.appImage }}
                 >
                   <img
                     src={project.images[0]}
@@ -123,7 +136,7 @@ const AppDev = () => {
                       objectFit: "cover",
                       margin: spacing.none,
                       borderRadius: spacing.md,
-                      border: borders.normal,
+                      border: borders.thin,
                     }}
                   />
                   <Typography
@@ -133,6 +146,7 @@ const AppDev = () => {
                     style={{
                       marginBottom: spacing.none,
                       marginTop: spacing.xs,
+                      marginLeft: spacing.sm,
                     }}
                   >
                     {project.name}
@@ -140,7 +154,7 @@ const AppDev = () => {
                   <Typography
                     variant="body"
                     color={colors.subtitle}
-                    style={{ margin: spacing.none }}
+                    style={{ margin: spacing.none, marginLeft: spacing.sm }}
                   >
                     {project.category}
                   </Typography>
