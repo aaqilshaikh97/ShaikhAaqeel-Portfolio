@@ -7,12 +7,13 @@ import { shadows } from "../../../styles/constants/shadows";
 interface CardProps {
   children: React.ReactNode;
   padding?: string;
-  margin?:string;
+  margin?: string;
   bgColor?: string;
   borderColor?: string;
   borderRadius?: string;
   shadow?: string;
   style?: React.CSSProperties;
+  onClick?: () => void;
 }
 
 const Card: React.FC<CardProps> = ({
@@ -24,9 +25,11 @@ const Card: React.FC<CardProps> = ({
   borderRadius = borders.rounded,
   shadow = shadows.light,
   style = {},
+  onClick,
 }) => {
   return (
     <div
+      onClick={onClick}
       style={{
         padding,
         margin,

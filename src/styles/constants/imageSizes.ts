@@ -15,4 +15,12 @@ export const imageSizes = {
     width: '200px',
     height: '250px',
   },
+  appImage: {
+    width: '200px',
+    height: 'auto',
+  },
+  webImage: {
+    width: "100%",  // Use percentage or specific values that work within the card
+    height: "200px", // Optional: can be auto or fixed
+  },
 };

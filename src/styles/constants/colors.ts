@@ -15,5 +15,6 @@ export const colors = {
   yellow: '#d9af5a',
   gray:'#4d4d4d',
   background:'#d9d9d9',
-  lightBlue:'#e3f2fd'
+  lightBlue:'#e3f2fd',
+  subtitle :'#666666'
 };
