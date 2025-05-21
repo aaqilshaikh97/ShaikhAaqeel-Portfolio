@@ -1,4 +1,9 @@
 export const imageSizes = {
+
+  extraSmall: {
+    width: '34px',
+    height: '34px',
+  },
   small: {
     width: '70px',
     height: '70px',

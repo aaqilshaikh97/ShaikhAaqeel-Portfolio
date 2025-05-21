@@ -5,78 +5,19 @@ import { shadows } from "../../../styles/constants/shadows";
 import { borders } from "../../../styles/constants/borders";
 import { spacing } from "../../../styles/constants/spacing";
 import Typography from "../../../components/common/Typography/Typography";
-import SafeWheels from "../../../assets/images/portfolio/ejobster.png";
 import { imageSizes } from "../../../styles/constants/imageSizes";
 import Grid from "@mui/material/Grid";
 import AppDetails from "./AppDetails";
-
-import sbstDashboardPreview from "../../../assets/images/portfolio/sbst/dashboard.png";
-import sbstLoginPreview from "../../../assets/images/portfolio/sbst/login.png";
-import sbstManagementPreview from "../../../assets/images/portfolio/sbst/management.png";
-import sbstAdvertisementPreview from "../../../assets/images/portfolio/sbst/advertisement.png";
-import sbstAnnouncementPreview from "../../../assets/images/portfolio/sbst/annoucement.png"; // Fix spelling in file name too
-import sbstCustomizationPreview from "../../../assets/images/portfolio/sbst/customization1.png";
-import sbstMapsPreview from "../../../assets/images/portfolio/sbst/maps.png";
-import sbstNavigationPreview from "../../../assets/images/portfolio/sbst/navigation.png";
-import sbstPoiPreview from "../../../assets/images/portfolio/sbst/POI.png";
-import sbstUsersPreview from "../../../assets/images/portfolio/sbst/users.png";
-import sbstVideoCallRecordingPreview from "../../../assets/images/portfolio/sbst/videocall.png";
-import sbstVideoCallDemoPreview from "../../../assets/images/portfolio/sbst/VideoCallDemo.png";
-
-interface AppData {
-  id: number;
-  images: string[];
-  name: string;
-  category: string;
-  Description: string;
-  url: string;
-}
-
-const appProjects: AppData[] = [
-  {
-    id: 1,
-    images: [
-      sbstDashboardPreview,
-      sbstLoginPreview,
-      sbstManagementPreview,
-      sbstAdvertisementPreview,
-      sbstAnnouncementPreview,
-      sbstCustomizationPreview,
-      sbstMapsPreview,
-      sbstNavigationPreview,
-      sbstPoiPreview,
-      sbstUsersPreview,
-      sbstVideoCallRecordingPreview,
-      sbstVideoCallDemoPreview,
-    ],
-    name: "SBST BOard",
-    category: "Admin PAnel",
-    url: "https://shaikhaaqeel.netlify.app/",
-    Description: "testing for Sbst ",
-  },
-  {
-    id: 2,
-    images: [SafeWheels, SafeWheels, SafeWheels],
-    name: "Foodies",
-    category: "Food Delivery",
-    url: "https://example.com/safewheels",
-    Description: "testing for Description",
-  },
-  {
-    id: 3,
-    images: [SafeWheels, SafeWheels, SafeWheels],
-    name: "FitTrack",
-    category: "Health",
-    url: "https://example.com/safewheels",
-    Description: "testing for Description",
-  },
-];
+import truncateText from "../../../utils/truncateText";
+import type { WebApplicationData } from "./WebApplicationData";
+import { WebApplicationProjects } from "./WebApplicationData";
 
 const WebDev = () => {
-  const [selectedProject, setSelectedProject] = useState<AppData | null>(null);
+  const [selectedProject, setSelectedProject] =
+    useState<WebApplicationData | null>(null);
   const [openDialog, setOpenDialog] = useState(false);
 
-  const handleCardClick = (project: AppData) => {
+  const handleCardClick = (project: WebApplicationData) => {
     setSelectedProject(project);
     setOpenDialog(true);
   };
@@ -90,7 +31,7 @@ const WebDev = () => {
     <>
       <>
         <Card
-           borderColor={borders.normal}
+          borderColor={borders.normal}
           shadow={shadows.none}
           bgColor={colors.Transparent}
           padding={spacing.sm}
@@ -105,7 +46,7 @@ const WebDev = () => {
             Web Application
           </Typography>
           <Grid container spacing={2}>
-            {appProjects.map((project) => (
+            {WebApplicationProjects.map((project) => (
               <Grid size={{ xs: 12, md: 6, sm: 6 }} key={project.id}>
                 <Card
                   key={project.id}
@@ -142,7 +83,7 @@ const WebDev = () => {
                     color={colors.subtitle}
                     style={{ marginTop: spacing.none, marginLeft: spacing.sm }}
                   >
-                    {project.category}
+                    {truncateText(project.category)}
                   </Typography>
                 </Card>
               </Grid>

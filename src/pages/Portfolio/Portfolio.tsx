@@ -7,8 +7,8 @@ import { spacing } from "../../styles/constants/spacing";
 import Typography from "../../components/common/Typography/Typography";
 import Navbar from "../../components/common/layout/Navbar";
 import Button from "../../components/common/Button/Button";
-import AppDev from "./components/Appdev";
-import WebDev from "./components/Webdev";
+import AppDev from "./components/MobileApplication";
+import WebDev from "./components/WebApplication";
 import { fontSizes } from "../../styles/constants/fontSizes";
 
 const Portfolio = () => {
@@ -68,13 +68,7 @@ const Portfolio = () => {
               onClick={() => setSelectedCategory("app")}
             />
           </div>
-          <Typography
-            variant="body"
-            color={colors.black}
-            style={{ marginBottom: spacing.sm }}
-          >
-            We are currently working on this section. Please check back soon.{" "}
-          </Typography>
+        
           {(selectedCategory === "all" || selectedCategory === "app") && (
             <AppDev />
           )}
