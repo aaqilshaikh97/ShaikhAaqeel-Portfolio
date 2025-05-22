@@ -17,7 +17,7 @@ interface AppDetailsProps {
   url?: string;
 }
 
-const AppDetails: React.FC<AppDetailsProps> = ({
+const WebApplicationDetails: React.FC<AppDetailsProps> = ({
   open,
   onClose,
   title,
@@ -57,7 +57,7 @@ const AppDetails: React.FC<AppDetailsProps> = ({
                 src={img}
                 alt={`preview-${idx}`}
                 style={{
-                  ...imageSizes.appImage,
+                  ...imageSizes.webImage,
                   border: borders.thin,
                   objectFit: "cover",
                   borderRadius: borders.rounded,
@@ -72,4 +72,4 @@ const AppDetails: React.FC<AppDetailsProps> = ({
   );
 };
 
-export default AppDetails;
+export default WebApplicationDetails;

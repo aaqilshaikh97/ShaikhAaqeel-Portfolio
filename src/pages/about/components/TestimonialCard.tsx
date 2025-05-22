@@ -4,47 +4,14 @@ import Card from "../../../components/common/Card/Card";
 import Typography from "../../../components/common/Typography/Typography";
 import { colors } from "../../../styles/constants/colors";
 import { spacing } from "../../../styles/constants/spacing";
-import Imran from "../../../assets/images/ng.jpg";
-import salman from "../../../assets/images/ng.jpg";
+
 import { imageSizes } from "../../../styles/constants/imageSizes";
 import { borders } from "../../../styles/constants/borders";
 import { shadows } from "../../../styles/constants/shadows";
 import Dialog from "@mui/material/Dialog";
 import DialogContent from "@mui/material/DialogContent";
-
-interface TestimonialItemProps {
-  image: string;
-  name: string;
-  feedback: string;
-  onClick: () => void;
-}
-
-const testimonials = [
-  {
-    image: Imran,
-    name: "Imran Khan",
-    feedback:
-      "Aaqil was hired to create a corporate identity for our company. We were extremely pleased with the work.Aaqil was hired to create a corporate identity for our companyAaqil was hired to create a corporate identity for our companyAaqil was hired to create a corporate identity for our companyAaqil was hired to create a corporate identity for our company",
-  },
-  {
-    image: salman,
-    name: "Salman Shaikh",
-    feedback:
-      "Aaqil's expertise and dedication to our project were truly impressive. He demonstrated a strong grasp of modern technologies.",
-  },
-  {
-    image: salman,
-    name: "Salman Shaikh",
-    feedback:
-      "Aaqil's expertise and dedication to our project were truly impressive. He demonstrated a strong grasp of modern technologies.",
-  },
-  {
-    image: salman,
-    name: "Salman Shaikh",
-    feedback:
-      "Aaqil's expertise and dedication to our project were truly impressive. He demonstrated a strong grasp of modern technologies.",
-  },
-];
+import { testimonials } from "../../../Data/About/testimonials";
+import type { TestimonialItemProps } from "../../../Data/About/testimonials";
 
 const truncateText = (text: string, wordLimit = 20) => {
   const words = text.split(" ");
@@ -69,7 +36,6 @@ const TestimonialItem = ({
         backgroundColor: colors.white,
         paddingTop: spacing.lg,
         paddingLeft: spacing.sm,
-        // height: "120px",
         width: "90%",
         borderRadius: borders.rounded,
       }}

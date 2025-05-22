@@ -1,4 +1,4 @@
-export const aboutContent = {
+export const aboutData = {
   heading: "About Me",
   paragraphs: [
     `As a Full Stack Developer at FaimSoft, I specialize in creating seamless web solutions from the ground up. Using technologies like React for the frontend and Django for the backend, I focus on building robust, user-friendly applications.`,

@@ -22,7 +22,7 @@ export const imageSizes = {
   },
   appImage: {
     width: '100%',
-    height: 'auto',
+    height: '600px',
   },
   webImage: {
     width: "100%",  

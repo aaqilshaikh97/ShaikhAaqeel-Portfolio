@@ -6,20 +6,20 @@ import "slick-carousel/slick/slick-theme.css";
 import { imageSizes } from "../../../styles/constants/imageSizes";
 import { spacing } from "../../../styles/constants/spacing";
 import { colors } from "../../../styles/constants/colors";
+import { clients  } from "../../../Data/About/clients";
+// import NSBOTLogo from "../../../assets/images/clients/NSBOT_logo.png";
+// import FaimsoftLogo from "../../../assets/images/clients/faimsoft-imag-removebg-preview.png";
+// import SBSTLogo from "../../../assets/images/clients/sbs_logo.png";
+// import EJobsterLogo from "../../../assets/images/clients/ejobster_logo.png";
+// import FoodsyLogo from "../../../assets/images/clients/foodsy.png";
 
-import NSBOTLogo from "../../../assets/images/clients/NSBOT_logo.png";
-import FaimsoftLogo from "../../../assets/images/clients/faimsoft-imag-removebg-preview.png";
-import SBSTLogo from "../../../assets/images/clients/sbs_logo.png";
-import EJobsterLogo from "../../../assets/images/clients/ejobster_logo.png";
-import FoodsyLogo from "../../../assets/images/clients/foodsy.png";
-
-const clients = [
-  { name: "NSBOT", logo: NSBOTLogo },
-  { name: "Faimsoft", logo: FaimsoftLogo },
-  { name: "SBST", logo: SBSTLogo },
-  { name: "EJobster", logo: EJobsterLogo },
-  { name: "Foodsy", logo: FoodsyLogo },
-];
+// const clients = [
+//   { name: "NSBOT", logo: NSBOTLogo },
+//   { name: "Faimsoft", logo: FaimsoftLogo },
+//   { name: "SBST", logo: SBSTLogo },
+//   { name: "EJobster", logo: EJobsterLogo },
+//   { name: "Foodsy", logo: FoodsyLogo },
+// ];
 
 const Client = () => {
   const settings = {

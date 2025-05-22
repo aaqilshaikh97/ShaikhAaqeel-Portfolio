@@ -7,10 +7,10 @@ import { spacing } from "../../../styles/constants/spacing";
 import Typography from "../../../components/common/Typography/Typography";
 import { imageSizes } from "../../../styles/constants/imageSizes";
 import Grid from "@mui/material/Grid";
-import AppDetails from "./AppDetails";
+import WebApplicationDetails from "./WebApplicationDetails";
 import truncateText from "../../../utils/truncateText";
-import type { WebApplicationData } from "./WebApplicationData";
-import { WebApplicationProjects } from "./WebApplicationData";
+import type { WebApplicationData } from "../../../Data/portfolio/WebApplicationData";
+import { WebApplicationProjects } from "../../../Data/portfolio/WebApplicationData";
 
 const WebDev = () => {
   const [selectedProject, setSelectedProject] =
@@ -92,7 +92,7 @@ const WebDev = () => {
         </Card>
 
         {selectedProject && (
-          <AppDetails
+          <WebApplicationDetails
             open={openDialog}
             onClose={handleDialogClose}
             title={selectedProject.name}

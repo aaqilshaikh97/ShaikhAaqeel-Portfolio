@@ -9,8 +9,8 @@ import { imageSizes } from "../../../styles/constants/imageSizes";
 import Grid from "@mui/material/Grid";
 import AppDetails from "./AppDetails";
 import truncateText from "../../../utils/truncateText";
-import type { MobileApplicationData } from "./mobileApplicationData";
-import { MobileApplicationProject } from "./mobileApplicationData";
+import type { MobileApplicationData } from "../../../Data/portfolio/mobileApplicationData";
+import { MobileApplicationProject } from "../../../Data/portfolio/mobileApplicationData";
 
 const MobileApplication = () => {
   const [selectedProject, setSelectedProject] =
@@ -54,6 +54,7 @@ const MobileApplication = () => {
                   shadow={shadows.medium}
                   borderColor={borders.rounded}
                   bgColor={colors.white}
+
                 >
                   <img
                     src={project.images[0]}

@@ -7,23 +7,8 @@ import { spacing } from "../../../styles/constants/spacing";
 import { fontSizes } from "../../../styles/constants/fontSizes";
 import { shadows } from "../../../styles/constants/shadows";
 import { borders } from "../../../styles/constants/borders";
-import { Icons } from "../../../assets/icons/icons";
 import { Box } from "@mui/material";
-
-const whatIDoItems = [
-  {
-    icon: <Icons.web />,
-    title: "Web development",
-    description:
-      "Crafting modern, responsive, and high-performance websites tailored to your business needs.",
-  },
-  {
-    icon: <Icons.mobile />,
-    title: "Mobile apps",
-    description:
-      "Building sleek, high-performance mobile applications for both iOS and Android platforms.",
-  },
-];
+import { whatIDoItems } from "../../../Data/About/whatIDo";
 
 const WhatIDo: React.FC = () => {
   return (
@@ -61,12 +46,10 @@ const WhatIDo: React.FC = () => {
                     display: "flex",
                     justifyContent: "center",
                     color: colors.primary,
-                    fontSize: fontSizes.lg,
+                    fontSize: "10rem",
                   }}
                 >
-                  {React.cloneElement(item.icon, {
-                    style: { fontSize: "2rem" },
-                  })}
+                  {item.icon}
                 </div>
 
                 <div>
