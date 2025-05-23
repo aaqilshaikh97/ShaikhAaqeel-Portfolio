@@ -66,7 +66,7 @@ const WebDev = () => {
                       display: "block",
                     }}
                   />
-                  <Typography
+                  {/* <Typography
                     variant="subtitle"
                     color={colors.black}
                     weight="bold"
@@ -84,7 +84,48 @@ const WebDev = () => {
                     style={{ marginTop: spacing.none, marginLeft: spacing.sm }}
                   >
                     {truncateText(project.category)}
-                  </Typography>
+                  </Typography> */}
+                   <div
+                    style={{
+                      display: "flex",
+                      alignItems: "center",
+                      marginTop: spacing.xs,
+                      paddingLeft: spacing.sm,
+                    }}
+                  >
+                    <img
+                      src={project.Logo}
+                      alt={`${project.name} logo`}
+                      style={{
+                        ...imageSizes.extraSmall,
+                        borderRadius: borders.rounded,
+                        marginRight: spacing.sm,
+                        border: borders.thin,
+                      }}
+                    />
+                    <div>
+                      <Typography
+                        variant="subtitle"
+                        color={colors.black}
+                        weight="bold"
+                        style={{
+                          marginBottom: spacing.none,
+                          marginTop: spacing.xs,
+                          marginLeft: spacing.sm,
+                          overflow: "hidden",
+                        }}
+                      >
+                        {truncateText(project.name)}
+                      </Typography>
+                      <Typography
+                        variant="body"
+                        color={colors.subtitle}
+                        style={{ margin: spacing.none, marginLeft: spacing.sm }}
+                      >
+                        {truncateText(project.category)}
+                      </Typography>
+                    </div>
+                  </div>
                 </Card>
               </Grid>
             ))}
